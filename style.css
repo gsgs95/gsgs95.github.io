@@ -1,5 +1,4 @@
 /*style.css*/
-h2{
-    color:white;
-    background:black;
+html    {
+    background: rgba(226, 226, 226, 0.582);
 }
