@@ -1,89 +1,53 @@
+<!-- HTML 문서 기본 구조 -->
 <!DOCTYPE html>
 <HTML>
-    <HEAD>
-        <title>웹 프로그래밍</title>
-        <link rel="stylesheet" href="./style.css">
-    </HEAD>
-    <BODY>
-        이름: <b><span style="font-family: 맑은고딕;">박규수</span></b> <br>
-        학부(과): 전자바이오물리학과 <br>
-        전자우편: rbtn95@gmail.com<br>
-        <p>
-        <h2><b>자기&nbsp;소개</b></h2><br>
-        물리학과 3학년 재학 중 이며, 소프트웨어학부 복수전공 중 입니다.<p></p>
+<HEAD>
+    <title>웹 프로그래밍</title>
 
-        좋아하는 것<br>
-        <ul>
-            <li>게임</li>
-            <li>음식</li>
-        </ul>
-        <ol>
-            <li>111</li>
-            <li>222</li>
-        </ol>
+    <!-- CSS -->
+    <!-- 내부 스타일 시트 -->
+            <style>
+                h1{
+                    color:paleturquoise;
+                    background:yellowgreen;
+                 }
+          </style>
 
-        검색엔진<br>
-        <ul>
-            <li><a href="https://www.naver.com" target=_blank> 네이버</a></li>
-            <li><a href="https://www.google.co.kr/" target=_blank>구글</a></li>
-        </ul>
-        <table style="text-align:center; background-color:rgba(180, 180, 180, 0.1);" width = 100% border=1 cellpadding=3 cellspacing=5>
-            <tr style="text-align:center;"><td colspan=6;>시간표</td></tr>
-            <tr style="background-color:rgba(180, 180, 180, 0.521)">
-                <th></th>
-                <th>월</th>
-                <th>화</th>
-                <th>수</th>
-                <th>목</th>
-                <th>금</th>
-            </tr>
-            <tr>
-                <td style="text-align:right;">1</td>
-                <td style="background-color:pink">수치해석</td>
-                <td></td>
-                <td style="background-color:rgb(192, 255, 231)">컴퓨터그래픽스</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">2</td>
-                <td style="background-color:rgb(192, 255, 231)">컴퓨터그래픽스</td>
-                <td></td>
-                <td style="background-color:pink">수치해석</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">3</td>
-                <td></td>
-                <td style="background-color:rgb(255, 225, 143)">정보디스플레이개론</td>
-                <td style="background-color:rgb(246, 253, 154)">광학</td>
-                <td></td>
-                <td style="background-color:rgb(154, 197, 253)" rowspan=2>생체재료학</td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">4</td>
-                <td style="background-color:rgb(246, 253, 154)">광학</td>
-                <td></td>
-                <td></td>
-                <td style="background-color:rgb(255, 225, 143)">정보디스플레이개론</td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">5</td>
-                <td style="background-color:rgb(206, 255, 143)">컴퓨터네트워크</td>
-                <td style="background-color:rgb(238, 142, 182)">시스템소프트웨어</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;">6</td>
-                <td></td>
-                <td></td>
-                <td style="background-color:rgb(206, 255, 143)">컴퓨터네트워크</td>
-                <td style="background-color:rgb(238, 142, 182)">시스템소프트웨어</td>
-                <td></td>
-            </tr>
-        </table>
-    </BODY>
+    <!-- 외부 스타일 시트: link 태그
+    <link rel="stylesheet" href="./style.css">
+    -->
+
+    <!-- 외부 스타일 시트: @import -->
+    <style>
+        @import url(style01.css);
+        @import url(style02.css);
+        @import url(style.css);
+    </style>
+    /**/
+    
+    <!-- 자바 스크립트 -->
+    <!-- 내부 자바 스크립트 -->
+<!--
+    <script type="text/javascript">
+            alert("Hello World!!! from: 내부 자바스크립트");
+    </script>
+-->
+   <!-- 외부 자바 스크립트 -->
+    
+   <!--
+       <script type="text/javascript" src="javascript.js"></script>
+    -->
+
+</HEAD>
+<BODY>
+    <h1>Hello World!!!</h1> <br>
+    This sentence is maybe colored red. <br>
+
+    자기소개로 가기 ->> <a href="selfintroducing.html" target=_self>자기소개로</a>
+
+
+
+
+    <h2>HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문서 구조</h2>
+</BODY>
 </HTML>
