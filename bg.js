@@ -31,6 +31,7 @@ function handleBgRightClick(event){
 
 function handleBgOnOffClick(event){
     bgOnOffBtn.classList.toggle(BG_CLICKED_CLASS);
+    bgBtns.classList.toggle(BG_CLICKED_CLASS);
     image.classList.toggle(ON);
     let result = false;
     bgOnOffBtn.classList.forEach(function(element) {

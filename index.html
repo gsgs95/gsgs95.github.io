@@ -1,53 +1,33 @@
-<!-- HTML 문서 기본 구조 -->
 <!DOCTYPE html>
-<HTML>
-<HEAD>
-    <title>웹 프로그래밍</title>
-
-    <!-- CSS -->
-    <!-- 내부 스타일 시트 -->
-            <style>
-                h1{
-                    color:paleturquoise;
-                    background:yellowgreen;
-                 }
-          </style>
-
-    <!-- 외부 스타일 시트: link 태그
-    <link rel="stylesheet" href="./style.css">
-    -->
-
-    <!-- 외부 스타일 시트: @import -->
-    <style>
-        @import url(style01.css);
-        @import url(style02.css);
-        @import url(style.css);
-    </style>
-    /**/
-    
-    <!-- 자바 스크립트 -->
-    <!-- 내부 자바 스크립트 -->
-<!--
-    <script type="text/javascript">
-            alert("Hello World!!! from: 내부 자바스크립트");
-    </script>
--->
-   <!-- 외부 자바 스크립트 -->
-    
-   <!--
-       <script type="text/javascript" src="javascript.js"></script>
-    -->
-
-</HEAD>
-<BODY>
-    <h1>Hello World!!!</h1> <br>
-    This sentence is maybe colored red. <br>
-
-    자기소개로 가기 ->> <a href="selfintroducing.html" target=_self>자기소개로</a>
-
-
-
-
-    <h2>HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문서 구조</h2>
-</BODY>
-</HTML>
+<html>
+    <head>
+        <title>Project: Intro</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <span class="js-bgBtns">
+            <button class="js-bgOnOffBtn"></button>
+            <button class="js-bgLeftBtn"></button>
+            <button class="js-bgRightBtn"></button>   
+        </span>
+        <br>
+        <span class="js-clock clock"></span>
+        <br>
+        <span class="js-weather weather"></span>
+        <hr class="line">
+        <div class="menu">
+        <span> | <a href="selfintroducing.html" target="frame">자기소개</a></span>
+        <span> | <a href="painter.html" target=_self>그림판</a> | </span>
+        </div>
+        <hr class="line">
+        <div class="frameWindow">
+            <iframe class="frame" name="frame"></iframe>    
+        </div>
+        <hr class="line">
+        <div class="tail"> gsgs95.com</div>
+        <script src="clock.js"></script>
+        <script src="bg.js"></script>
+        <script src="weather.js"></script>
+    </body>
+</html>
