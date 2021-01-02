@@ -1,0 +1,36 @@
+body { 
+    background-color: paleturquoise;
+    font-family: Roboto;
+}
+.headerBox {
+    background-color: white;
+    color: rgb(156, 141, 0);
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.examplesName {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.btn{
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+    border: none;
+}
+
+.btn.clicked{
+    transform: rotate(180deg);
+}
+   
+.frame{
+    background-color:white;
+    width: 800px;
+    height: 800px;
+    display:none;
+}
+
+.showing {
+    display:block;
+}
