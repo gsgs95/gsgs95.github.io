@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>웹 프로그래밍</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                width: 100%;
+                margin: 0 auto;
+            }
+            header {
+                background-color: black;
+                color: white;
+            }
+            nav {
+                height: 30px;
+                background-color: yellow;
+            }
+            footer {
+                background: silver;
+                color: white;
+            }
+            #wrapper {
+                overflow: hidden;
+                height: 400px;
+            }
+            section>#main {
+                float: left;
+                width: 500px;
+            }
+            aside {
+                float: left;
+                width: 200px;
+                height: 300px;
+                background-color:orange;
+            }
+            ul.listinline li {
+                display: inline;
+                background-color: yellow;
+                border: 1px solid;
+                border-color: silver;
+                padding: 5px;
+                margin: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 1) 머리글 블록 -->
+        <header><h1>웹프로그래밍</h1></header>
+        <!-- 2) 메뉴 블록 -->
+        <nav>
+            <ul class="listinline">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </nav>
+        <!-- 3) 본문 블록 -->
+        <section id="wrapper">
+            <!-- 3-1) 본문 section 블록 -->
+            <section id="main">
+                <article>
+                    <h1>HTML</h1>
+                    <p>자유로운 영혼
+                </article>
+                <article>
+                    <h1>CSS</h1>
+                    <p>산은 산이요 물은 물이로다
+                </article>
+            </section>
+            <!-- 3-2) 본문 aside 블록 -->
+            <aside>aside</aside>
+        </section>
+        <!-- 4) 바닥글 블록 -->
+        <footer><address>서울특별시 무슨구 무슨동</address></footer>
+    </body>
+</html>

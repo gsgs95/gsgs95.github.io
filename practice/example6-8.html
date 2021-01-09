@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>웹 프로그래밍</title>
+    </head>
+    <body>
+
+        <p id="demo"></p>
+        <script>
+          document.getElementById("demo").innerHTML = 
+                typeof undefined + "<br>" + 
+                typeof null + "<br><br>" + 
+                (null === undefined) + "<br>" + 
+                (null == undefined);
+        </script>
+    </body>
+</html>
