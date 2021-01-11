@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Project: Intro</title>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css" />
+        <title>Project: Intro</title>
     </head>
     <body>
-        <span class="js-bgBtns">
-            <button class="js-bgOnOffBtn"></button>
-            <button class="js-bgLeftBtn"></button>
-            <button class="js-bgRightBtn"></button>   
-        </span>
-        <br>
-        <span class="js-clock clock"></span>
-        <br>
-        <span class="js-weather weather"></span>
+        <header>
+            <section class="js-bgBtns">
+                <button class="js-bgOnOffBtn"></button>
+                <button class="js-bgLeftBtn"></button>
+                <button class="js-bgRightBtn"></button>
+            </section>
+            <br>
+            <section class="js-clock clock"></section>
+            <br>
+            <section class="js-weather weather"></section>
+        </header>
         <hr class="line">
-        <div class="menu">
-        <span> | <a href="selfintroducing.html" target="frame">자기소개</a></span>
-        <span> | <a href="painter.html" target=_self>그림판</a> | </span>
-        </div>
+        <nav class="menu">
+            <div>
+                <button> <a href="selfintroducing.html" target="frame">자기소개</a></button>
+                <button> <a href="painter.html" target=_self>그림판</a> </button>
+            </div>
+        </nav>
         <hr class="line">
-        <div class="frameWindow">
-            <iframe class="frame" name="frame"></iframe>    
-        </div>
+        <section class="bodySection">
+            <div class="frameWindow">
+                <iframe class="frame" name="frame"></iframe>
+            </div>
+        </section>
         <hr class="line">
-        <div class="tail"> gsgs95.com</div>
+        <footer>
+            <div class="tail"> gsgs95.com</div>
+        </footer>
         <script src="clock.js"></script>
         <script src="bg.js"></script>
         <script src="weather.js"></script>
