@@ -5,4 +5,4 @@ gsgs95.com
 ---
 [Project Link](https://gsgs95.github.io "Project:Intro"){: target="_blank"}
 
-[연습문제 목록](https://gsgs95.github.io/practice/ "수업시간에 다룬 연습문제들 모음"){: target="_blank"}
+[연습문제 목록](https://gsgs95.github.io/practice/){: target="_blank"}
