@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 웹 프로그래밍 </title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script>
+            
+            $(document).ready(function () {
+                var output = '';
+                for (var i = 0; i < 256; i++) {
+                    output += '<div></div>';
+                }
+                // 생성한 256개의 div를 document에 작성
+                document.body.innerHTML = output;
+                // 모든 div태그에 대해 다음 css 스타일 적용
+                $('div').css({
+                    height: 2,
+                    backgroundColor: function (i) { // index 매개변수 사용
+                        return 'rgb(' + i + ',' + i + ',' + i + ')';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

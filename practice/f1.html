@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head><title>웹 프로그래밍</title></head>
+    <body>
+        <script>
+            var     num; // undefined
+            var     obj = null; // object
+
+            document.write(typeof num + "<br>");
+            document.write(typeof obj + "<br>");
+            document.write("num==null : " + (num==null) + "<br>"); // num이 null과 값은 같음
+            document.write("num===null : " + (num===null) + "<br><br>"); // undefined 이므로 null이 아님
+
+            
+            // JS는 변수의 자료형이 동적이다
+            num = 10; // Ok
+            obj = 10.5; // Ok
+            // 이제 num, obj는 number이다
+            document.write(typeof num + "<br>");
+            document.write(typeof obj + "<br><br>");
+
+            // JS는 변수 재선언이 가능하다
+            var     num = '10' + '20'; // Ok, 이제 num은 string이다
+            document.write(" num : " + num + "<br>");
+            document.write(typeof num + "<br><br>");
+
+            document.write(typeof true + "<br>"); // boolean
+            document.write(typeof [1,2,3] + "<br>"); // array도 object이다
+            document.write(typeof function () {} + "<br><br>"); // function
+
+            var a = 5; // number
+            var b = "5"; // string
+            document.write("a==b : " + (a==b) + "<br>"); // 값은 같음
+            document.write("a===b : " + (a===b) + "<br><br>"); // 자료형 다름
+
+            document.write("a!=b : " + (a!=b) + "<br>"); // 값은 같음
+            document.write("a!==b : " + (a!==b) + "<br><br>"); // 자료형 다름
+        </script>
+    </body>
+</html>
