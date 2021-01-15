@@ -33,7 +33,7 @@ LineWidth : 0.1~30.0 까지 0.1단위로 조절가능합니다.
 ---
 
 ## Painter 사용예시
-![painterEx05](./readmeImg/05.png "painterEx05")  
+![painterEx00](./readmeImg/00.png "painterEx00")  
 ![painterEx04](./readmeImg/04.png "painterEx04")  
 친구들에게도 테스트를 요청해보았습니다  
 ![painterEx01](./readmeImg/01.png "painterEx01")  
