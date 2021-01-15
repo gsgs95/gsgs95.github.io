@@ -27,7 +27,7 @@ gsgs95.com
 
 ## Painter 사용예시
 친구들에게 테스트를 요청해보았습니다
-![painterEx01](.readmeImg/01.png)
-![painterEx02](.readmeImg/02.png)
-![painterEx03](.readmeImg/03.png)
-![painterEx03](.readmeImg/04.png)
+![painterEx01](./readmeImg/01.png)
+![painterEx02](./readmeImg/02.png)
+![painterEx03](./readmeImg/03.png)
+![painterEx03](./readmeImg/04.png)
