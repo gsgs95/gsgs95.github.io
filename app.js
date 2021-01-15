@@ -18,7 +18,10 @@ const colors = document.getElementsByClassName("jsColor");
 const tools = document.getElementsByClassName("jsTool");
 const saveBtn = document.getElementById("jsSave");
 const homeBtn = document.getElementById("jsHome");
+const pen = document.getElementById(PEN);
+const eraser = document.getElementById(ERASER);
 const bucket = document.getElementById(BUCKET);
+const pipette = document.getElementById(PIPETTE);
 const freeColorBtn = document.getElementById(FREE_COLOR_ID);
 
 // Range Selectors
@@ -40,6 +43,7 @@ const INITIAL_COLOR = "#2c2c2c"; // default color
 const INITIAL_COLOR_NUM = 0;
 const INITIAL_TOOL_NUM = 0;
 const INITIAL_LINEWIDTH = 2.5; // default lineWidth
+const LINE_WIDTH_STEP = 0.5;
 
 
 // canvasContext attrs initialize
@@ -62,7 +66,6 @@ let drawing = true;
 let erasing = false;
 let filling = false;
 let pipetting = false;
-
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -129,7 +132,7 @@ function handleCanvasClick(event) {
     // 활성화된 모드별로 작동
     if (filling) { // Bucket Mode
         ctx.fillRect(0,0,canvas.width,canvas.height);
-    } else if(pipetting) { // Pippet Mode
+    } else if(pipetting) { // pipette Mode
         // 클릭지점 픽셀의 색상값을 배열로 받아옴
         const imageData = ctx.getImageData(x, y, 1,1);
         const pixelColor=Array.from(imageData.data);
@@ -261,7 +264,6 @@ function handleRangeChange(event) {
     // 어떤 range가 변하는지 확인
     const size = event.target.value;
     const sizebox = event.target.nextSibling.nextSibling;
-    console.log(sizebox.id);
     sizebox.innerText = `${size}`;
     if(sizebox === lineWidthRangeViewer) { // 선굵기
         ctx.lineWidth = size;
@@ -315,6 +317,61 @@ function handleHomeClick() {
     link.click();
 }
 
+// hotkey handler
+function handleKeyboardInput(event) {
+    if (!painting) { // 마우스다운 중에는 어떤 키입력도 무시
+        const keyCode = event.code;
+        let targetObj
+        let size = lineWidthRange.value;
+        switch (keyCode) {
+            case "KeyP": // PenMode
+                targetObj = pen; break;
+            case "KeyE": // EraserMode
+                targetObj = eraser; break;
+            case "KeyG": // BucketMode
+                targetObj = bucket; break;
+            case "KeyO": // PipetteMode
+                targetObj = pipette; break;
+            case "BracketRight": // LineWidth++
+                lineWidthRange.value = `${parseFloat(lineWidthRange.value) + LINE_WIDTH_STEP}`;
+                lineWidthRange.nextSibling.nextSibling.innerText = `${lineWidthRange.value}`;
+                ctx.lineWidth = lineWidthRange.value;
+                break;
+            case "BracketLeft": // LineWidth--
+                lineWidthRange.value = `${parseFloat(lineWidthRange.value) - LINE_WIDTH_STEP}`;
+                lineWidthRange.nextSibling.nextSibling.innerText = `${lineWidthRange.value}`;
+                ctx.lineWidth = lineWidthRange.value;
+                break;
+            default:
+                break;
+        }
+                if (targetObj !== undefined) { // 유효 핫키
+                    if (Array.from(targetObj.classList).includes(CLICKED)) return; // 이미 CLICKED 면 return
+                    Array.from(tools).forEach(obj => obj.classList.remove(CLICKED));
+                    targetObj.classList.add(CLICKED);
+                    const id = targetObj.id;
+                    initModes(); // tool flag 초기화
+                    switch (id) {
+                        case PEN:
+                            handlePenClick();
+                            break;
+                        case ERASER:
+                            handleEraserClick();
+                            break;
+                        case PIPETTE:
+                            handlePipetteClick();
+                            break;
+                        case BUCKET:
+                            handleBucketClick();
+                            break;
+                        default:
+                            console.log("ERROR: unvalid id @handleToolsClick()");
+                            break;
+                    }
+                }
+        }
+    }
+
 //////////////////////////////////////////////////////////////////////////
 // Binding eventListners
 function init() {
@@ -336,6 +393,12 @@ function init() {
         canvas.addEventListener("mouseleave", stopPainting);
         canvas.addEventListener("click", handleCanvasClick);
         canvas.addEventListener("contextmenu", handleContextMenu);
+        /*//test touch event
+        canvas.addEventListener("touchstart",startPainting);
+        canvas.addEventListener("touchend",stopPainting);
+        canvas.addEventListener("touchmove",onMouseMove);
+        canvas.addEventListener("touchcancel",stopPainting);
+        */
     }
     
     // ColorClick event
@@ -348,6 +411,9 @@ function init() {
         tool.addEventListener("click", handleToolsClick)
     );
     
+    // Tools hotkey event
+    window.addEventListener("keydown", handleKeyboardInput);
+
     // RangeChange event
     if(lineWidthRange) {
         lineWidthRange.addEventListener("input", handleRangeChange);
@@ -397,7 +463,7 @@ init();
         ✔    8. 스포이드
              9. undo redo
         ✔    10. 도구별 커서
-             11. 도구별 단축키 설정
+        ✔    11. 도구별 키보드 핫키
 
         ⚠  자유색 알파값 조절실패
 */
