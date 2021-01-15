@@ -1,5 +1,6 @@
 body{
     background-color: rgb(52, 73, 94);;
+    overflow:hidden;
 }
 
 .clock {
@@ -24,6 +25,7 @@ body{
 }
 .frameWindow{
     text-align: center;
+    overflow:scroll;
 }
 .frame {
     text-align: center;
@@ -45,6 +47,7 @@ body{
     }
 }
 
+
 .bgImage{
     position: absolute;
     top: 0;
@@ -54,10 +57,11 @@ body{
     z-index: -1;
     animation: fadeIn .5s linear;
 }
-.js-bgOnOffBtn {
+
+.bgOnOffBtn {
     position: relative;
 }
-.js-bgBtns {
+.bgBtns {
     position: relative;
 }
 
@@ -67,4 +71,17 @@ body{
 
 .bgClicked {
     z-index: 2;
+}
+
+header{
+    text-align: center;
+}
+
+.widgetBox {
+    display:inline-flex;
+}
+
+.widgetBox .widgetRightBox {
+    margin-left: 150px;
+    margin-right: 150px;
 }
