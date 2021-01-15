@@ -9,7 +9,7 @@ gsgs95.com
 
 ## 페인터 프로젝트 링크
 **[Painter Link](https://gsgs95.github.io/painter.html "Project:Painter")**
-
+![painterLayout](./readmeImg/painterLayout.png "painterLayout")
 ## Painter Usage
 배경은 기본적으로 투명입니다.
 지우개 사용시 clearRect로 똑같이 투명이 됨.
@@ -27,7 +27,7 @@ gsgs95.com
 
 ## Painter 사용예시
 친구들에게 테스트를 요청해보았습니다
-![painterEx01](./readmeImg/01.png)
-![painterEx02](./readmeImg/02.png)
-![painterEx03](./readmeImg/03.png)
-![painterEx03](./readmeImg/04.png)
+![painterEx01](./readmeImg/01.png "painterEx01")
+![painterEx02](./readmeImg/02.png "painterEx02")
+![painterEx03](./readmeImg/03.png "painterEx03")
+![painterEx04](./readmeImg/04.png "painterEx04")
