@@ -12,10 +12,12 @@ gsgs95.com
 
 ## Usage
 ### Keyboard Hotkey
-|Keyboard|Mode|
+|Keyboard|Description|
 |:-:|:-:|
 |P|Pen|
 |E|Eraser|
 |G|Bucket|
 |O|Pipette|
+|[|decrease pen-linewidth|
+|]|increase pen-linewidth|
 ---
