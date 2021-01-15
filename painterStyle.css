@@ -22,7 +22,7 @@ body {
 }
 
 .controls {
-    margin-top: 80px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,8 +68,26 @@ body {
 }
 
 .controls .controls__range {
-    margin-bottom: 30px;
+    margin: 20px;
     display: flex;
+}
+.controls .controls__range .controls__lineWidth {
+    margin:0 auto;
+}
+
+.controls .controls__range .controls__freeColor {
+    margin:0 auto;
+}
+
+.rangeViewerBox {
+    display: block;
+    margin: 5px;
+    padding:5px;
+    width: 200px;
+    height: 20px;
+    text-align-last: left;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .controls__btns .clicked {
@@ -77,12 +95,8 @@ body {
     box-shadow: inset 0 4px 6px rgba(50,50,93,0.11), inset 0 1px 3px rgba(0,0,0,0.8);
 }
 
-.menu {
-    margin-bottom: 50px;
-}
-
 .tail {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .controls__tools .controls__tool {
@@ -93,14 +107,4 @@ body {
     height: 16px;
     pointer-events: none;
     cursor: default;
-}
-
-.rangeViewerBox {
-    margin: 5px;
-    padding:5px;
-    width: 100px;
-    height: 20px;
-    text-align-last: left;
-    font-size: 18px;
-    font-weight: 800;
 }
